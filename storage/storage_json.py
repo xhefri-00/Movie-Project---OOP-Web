@@ -1,8 +1,12 @@
 import requests
 from istorage import IStorage
 import json
+from dotenv import load_dotenv
+import os
 
-OMDB_API_KEY = "1db3c1d7"
+
+load_dotenv()
+OMDB_API_KEY = os.getenv("OMDB_API_KEY")
 
 class StorageJson(IStorage):
     def __init__(self, file_path):
