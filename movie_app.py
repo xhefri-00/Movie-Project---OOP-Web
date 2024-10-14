@@ -1,6 +1,11 @@
 import requests
+from dotenv import load_dotenv
+import os
 
-OMDB_API_KEY = "1db3c1d7"
+
+load_dotenv()
+OMDB_API_KEY = os.getenv("OMDB_API_KEY")
+
 
 class MovieApp:
     def __init__(self, storage):
